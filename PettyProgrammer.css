@@ -1,0 +1,78 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  padding: 0;
+  margin:0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:#333;
+}
+.about-container{
+  width: 400px;
+  height: 500px;
+  background: url("b6.jpg");
+  background-size: cover;
+  border:5px solid #fff;
+  position: relative;
+  overflow: hidden;
+}
+.about-container input{
+  display: none;
+}
+.about-container label{
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 50px;
+  box-shadow: 0 0 0 0 #640A0F;
+  z-index: 3;
+  transition: .5s ease-in-out;
+}
+.about-container input:checked + label{
+  box-shadow: 0 0 0 600px #640A0F;
+  transform: rotate(45deg);
+  opacity: .9;
+}
+.about-container .about{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:-290px;
+  padding:20px;
+  padding-top: 90px;
+  text-align: center;
+  transition: .5s ease-in-out;
+  transition-delay: .3s;
+}
+.about-container .about .title{
+  font-size: 15px;
+  margin-bottom: 15px;
+  color:#fff;
+  position: relative;
+  z-index: 5;
+  font-family: roboto slab;
+}
+.about-container .about .disc{
+  font-size: 17px;
+  font-family: arial;
+  color:#ffff;
+  position: relative;
+  z-index: 5;
+}
+.about-container input:checked ~ .about{
+  top:0;
+}
